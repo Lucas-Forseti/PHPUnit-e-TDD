@@ -38,32 +38,32 @@ class AvaliadorTest extends TestCase
      * @dataProvider leilaoEmOrdemCrescente
      * @dataProvider leilaoEmOrdemDecrescente
      */
-    public function testAvaliadorDeveEncontrarOMenorValorDeLances(Leilao $leilao)
-    {
-        // Act - When
-        $this->leiloeiro->avalia($leilao);
-
-        $menorValor = $this->leiloeiro->getMenorValor();
-
-        // Assert - Then
-        self::assertEquals(1700, $menorValor);
-    }
+//    public function testAvaliadorDeveEncontrarOMenorValorDeLances(Leilao $leilao)
+//    {
+//        // Act - When
+//        $this->leiloeiro->avalia($leilao);
+//
+//        $menorValor = $this->leiloeiro->getMenorValor();
+//
+//        // Assert - Then
+//        self::assertEquals(1700, $menorValor);
+//    }
 
     /**
      * @dataProvider leilaoEmOrdemAleatoria
      * @dataProvider leilaoEmOrdemCrescente
      * @dataProvider leilaoEmOrdemDecrescente
      */
-    public function testAvaliadorDeveBuscar3MaioresValores(Leilao $leilao)
-    {
-        $this->leiloeiro->avalia($leilao);
-
-        $maiores = $this->leiloeiro->getMaioresLances();
-        static::assertCount(3, $maiores);
-        static::assertEquals(2500, $maiores[0]->getValor());
-        static::assertEquals(2000, $maiores[1]->getValor());
-        static::assertEquals(1700, $maiores[2]->getValor());
-    }
+//    public function testAvaliadorDeveBuscar3MaioresValores(Leilao $leilao)
+//    {
+//        $this->leiloeiro->avalia($leilao);
+//
+//        $maiores = $this->leiloeiro->getMaioresLances();
+//        static::assertCount(3, $maiores);
+//        static::assertEquals(2500, $maiores[0]->getValor());
+//        static::assertEquals(2000, $maiores[1]->getValor());
+//        static::assertEquals(1700, $maiores[2]->getValor());
+//    }
 
     /* ------ DADOS ------- */
     public function leilaoEmOrdemCrescente()
